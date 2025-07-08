@@ -1,0 +1,12 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store # macOS specific
+Thumbs.db # Windows specific
+venv/     # Python virtual environment directory
+env/      # Alternative virtual environment directory name
+*.log
+*.cache
+.env      # If you use a .env file for local environment variables
