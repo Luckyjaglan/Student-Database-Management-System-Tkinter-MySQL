@@ -98,3 +98,9 @@ python main.py
 Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to change.
 
 ---
+
+## 📫 Contact
+
+Made with ❤️ by [@HarshRathi](https://github.com/HRathi27)
+                [@TejasDahiya](https://github.com/TejasDahiya09)
+                [@LuckyJaglan](https://github.com/Luckyjaglan)
