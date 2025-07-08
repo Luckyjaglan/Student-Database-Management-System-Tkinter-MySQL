@@ -1,9 +1,9 @@
 
-# 🧑‍🎓 Student Management System – Tkinter + MySQL
+# 🧑‍🎓 Student Database Management System – Tkinter + MySQL
 
 A clean, simple **Python desktop app** built using **Tkinter for GUI** and **MySQL** as the backend. The system supports full CRUD operations on student records and is designed with modularity and ease-of-use in mind.
 
-![screenshot](path/to/screenshot.png) <!-- Replace with actual screenshot path -->
+![screenshot](Management_Images/Screenshot.png)
 
 ---
 
@@ -24,7 +24,7 @@ A clean, simple **Python desktop app** built using **Tkinter for GUI** and **MyS
 - **Tkinter**
 - **MySQL** (local server)
 - **mysql-connector-python**
-- **Pillow**, **tkcalendar** (if used)
+- **Pillow**
 
 ---
 
@@ -53,7 +53,11 @@ pip install -r requirements.txt
 mysql -u root -p
 SOURCE schema.sql;
 ```
-> ⚠️ Make sure the MySQL root password in `database.py` matches yours. Default: `password="yes"`
+🔐 **Database Credentials**  
+> The app no longer stores your database password in code.  
+> You'll be securely prompted or should configure a `.env` file or other secure method locally.
+
+📁 *Tip:* If you're using a `.env` file to manage secrets, make sure to include `.env` in your `.gitignore`.
 
 ---
 
@@ -94,4 +98,3 @@ python main.py
 Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to change.
 
 ---
-

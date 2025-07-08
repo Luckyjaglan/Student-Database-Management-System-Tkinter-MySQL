@@ -1,21 +1,19 @@
 # database.py
 import mysql.connector
 from tkinter import messagebox
-import os # Import the os module
+import os # Add this line
 
 class Database:
-    def __init__(self, host="localhost", user="root", password=None, database="studentmanagementsystem"):
+    def __init__(self, host="localhost", user="root", database="studentmanagementsystem"):
         """Initializes the database connection."""
         self.host = host
         self.user = user
+        self.password = os.environ.get("MYSQL_PASSWORD") # Read from environment variable
         self.database = database
-
-        # Get password from environment variable (secure approach)
-        # It will default to an empty string if MYSQL_PASSWORD is not set.
-        # You *could* put a default like "yes" here for local dev, but it's less secure.
-        self.password = os.getenv("MYSQL_PASSWORD", "")
-
         self.connection = None
+        if not self.password:
+            messagebox.showerror("Configuration Error", "MYSQL_PASSWORD environment variable is not set.", icon='error')
+            exit()
         try:
             self.connection = mysql.connector.connect(
                 host=self.host,
@@ -25,7 +23,7 @@ class Database:
             )
         except mysql.connector.Error as err:
             messagebox.showerror("Database Error", f"Failed to connect: {err}", icon='error')
-            exit() # Exit if connection fails
+            exit()
 
     def get_cursor(self):
         """Returns a cursor for the established connection."""

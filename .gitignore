@@ -1,12 +1,26 @@
-# .gitignore
+
+# Byte-compiled / cache files
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
-*.pyd
-.DS_Store # macOS specific
-Thumbs.db # Windows specific
-venv/     # Python virtual environment directory
-env/      # Alternative virtual environment directory name
+
+# Virtual environment
+venv/
+env/
+
+# Environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Python-related logs and databases
 *.log
-*.cache
-.env      # If you use a .env file for local environment variables
+*.sqlite3
+
+# MySQL dump files (if sensitive)
+*.sql
+
+# VS Code settings
+.vscode/
