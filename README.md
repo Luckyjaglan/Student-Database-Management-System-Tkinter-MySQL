@@ -32,7 +32,7 @@ A clean, simple **Python desktop app** built using **Tkinter for GUI** and **MyS
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Luckyjaglan/Student-Management-System-Tkinter-MySQL.git
+git clone https://github.com/Luckyjaglan/Student-Database-Management-System-Tkinter-MySQL.git
 cd Student-Management-System-Tkinter-MySQL
 ```
 
